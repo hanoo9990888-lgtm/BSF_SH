@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>رحلة شهد — Code Journey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- خلفية Matrix -->
+  <div id="matrix-bg"></div>
+  <!-- نجوم متحركة -->
+  <canvas id="stars"></canvas>
+
+  <!-- شاشة البداية -->
+  <div id="start-screen">
+    <div class="terminal-header">user@shahd:~$</div>
+    <div id="terminal-output">
+      <p>جاري تحميل رحلة شهد...</p>
+      <p id="typing-text"></p>
+    </div>
+    <button id="start-btn">ابدأ الرحلة</button>
+  </div>
+
+  <!-- شريط الملاحة -->
+  <nav id="journey-map" class="hidden">
+    <button class="nav-btn active" data-stage="1">🏆 الإنجازات</button>
+    <button class="nav-btn" data-stage="2">🌉 المحاولة</button>
+    <button class="nav-btn" data-stage="3">🎉 الفرح</button>
+    <button class="nav-btn" data-stage="4">🎓 الجامعة</button>
+  </nav>
+
+  <!-- المحطات -->
+  <main id="journey-content" class="hidden">
+    <section class="stage active" id="stage-1">
+      <div class="stage-content">
+        <h2>🏆 الإنجازات — بيت ذكي من قلب الثانوية</h2>
+        <p id="text1"></p>
+        <div class="gallery">
+          <img src="smart-home.jpg" alt="مشروع البيت الذكي">
+          <img src="award.jpg" alt="شهادة التكريم">
+        </div>
+      </div>
+    </section>
+    <section class="stage" id="stage-2">
+      <div class="stage-content">
+        <h2>🌉 جسر المحاولة — السنة الماضية</h2>
+        <p id="text2"></p>
+        <div class="gallery">
+          <img src="study1.jpg" alt="ليلة دراسة">
+          <img src="study2.jpg" alt="تحضير للاختبار">
+          <img src="study3.jpg" alt="مع الزميلات">
+        </div>
+      </div>
+    </section>
+    <section class="stage" id="stage-3">
+      <div class="stage-content joy">
+        <h2>🎉 جزيرة الفرح — <code>alert("مقبولة!")</code></h2>
+        <p>وصلتِ، شهد! 🌟<br>اللحظة تستحق كل كفاح.</p>
+      </div>
+    </section>
+    <section class="stage" id="stage-4">
+      <div class="stage-content">
+        <h2>🎓 الوجهة — الجامعة</h2>
+        <p id="text4"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hidden">هدية من القلب ❤️ | أريام — 2025</footer>
+
+  <!-- الصوتيات -->
+  <audio id="bgMusic" preload="auto"></audio>
+  <audio id="joySound" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
